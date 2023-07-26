@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="./" type="image/x-icon">
-    <link rel="shortcut icon" href="./assets/favicon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="./assets/logo.png" type="image/x-icon">
     <title>Café do Luís</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" 
@@ -16,18 +16,18 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700&family=Barlow:wght@400;600&display=swap" rel="stylesheet">
 </head>
-<body>
+<body data-bs-theme="light">
 
   <header>
     <nav class="navbar-expand-lg navbar bg-body-tertiary fixed-top">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#"><img src="./assets/logo.png" alt="Logo da cafeteria Sereneatto"></a>
+        <a class="navbar-brand" href="#"><img class="logotipo" src="./assets/logo.png" alt="Logo da cafeteria"></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
           <div class="offcanvas-header">
-            <h5 class="offcanvas-title" id="offcanvasNavbarLabel"><img src="./assets/logo-mobile.png" alt="Logo da cafeteria Serenatto"></h5>
+            <h5 class="offcanvas-title" id="offcanvasNavbarLabel"><img src="./assets/favicon.png" alt="Logo da cafeteria Serenatto"></h5>
             <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
           </div>
           <div class="offcanvas-body">
@@ -39,13 +39,13 @@
                 <a class="nav-link" href="#">Sobre</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Contato</a>
+                <a class="nav-link" href="#contato">Contato</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">
                   <div class="form-check form-switch">
-                    <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
-                    <label class="form-check-label" for="flexSwitchCheckDefault">Modo noturno</label>
+                    <input class="form-check-input" type="checkbox" role="switch" id="modo-noturno">
+                    <label class="form-check-label" for="modo-noturno">Modo noturno</label>
                   </div></a>
               </li>
           </div>
@@ -117,7 +117,7 @@
 
         <h2 class="fw-bold text-center pb-1">Nossos produtos</h2>
         
-        <div class="row">
+        <div class="row mx-0">
 
           <div class="col-12 col-md-6 col-lg-4">
               <div class="card border-0 mx-auto btn" data-bs-toggle="modal" data-bs-target="#modal-1"
@@ -180,6 +180,50 @@
 
       <section class="banners banner-3">
       </section>
+
+      <section class="py-4 container w-50">
+        <div class="border-border-2 rounded p-3">
+          <h3 class="fw-bold p-3">Entre em contato!</h3>
+          <form id="contato">
+            <div class="form-floating mb-3">
+              <input type="text" class="form-control" id="floatingNome" placeholder="Nome">
+              <label for="floatingNome">Nome</label>
+            </div>
+            <div class="form-floating mb-3">
+              <input type="email" class="form-control" id="floatingEmail" placeholder="name@example.com">
+              <label for="floatingEmail">Email</label>
+            </div>
+            <div class="form-floating mb-3">
+              <input type="number" class="form-control" id="floatingTelefone" placeholder="name@example.com">
+              <label for="floatingTelefone">Telefone</label>
+              
+              
+            <div>
+              <select class="form-select p-3 mt-3" aria-label="Default select example">
+                <option selected>Preferência de contato</option>
+                <option value="1">Email</option>
+                <option value="2">Whatsapp</option>
+                <option value="3">Ligação</option>
+              </select>
+            </div>
+             
+            </div>
+
+            <label for="nivel-satisfacao" class="form-label">Nivel de satisfação</label>
+            <input type="range" class="form-range input-range" id="nivel-satisfacao">
+
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+              <label class="form-check-label" for="flexCheckDefault">
+                Deseja receber novidades por Email?
+              </label>
+            </div>
+
+            <button type="button" class="btn botao-padrao w-100 fw-bold mt-3 py-3">Enviar</button>
+        <div>
+          </form>
+       
+          
 
     </main>
 
@@ -368,9 +412,20 @@
     </div>
   </div>
 
+  <footer class="rodape mt-3 text-center">
+    <section class="container p-4 pb-0 mb-4">
+     <a href="#!" class="btn"> <i class="bi bi-whatsapp"></i> </a>
+      <a href="#!" class="btn"> <i class="bi bi-instagram"></i> </a>
+        <a href="#!" class="btn"> <i class="bi bi-twitter"></i>  </a>
+    <div>
+      2023 <i class="bi bi-c-circle"></i> Desenvolvido por Luís Felipe | Projeto fictício sem fins comerciais.
+    </div>
+</footer>
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N"
     crossorigin="anonymous"></script>
-</body>
 
+    <script src="./script.js"></script>
+</body>
 </html>

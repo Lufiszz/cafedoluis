@@ -65,3 +65,28 @@ input[type="checkbox"]:focus {
 .botao-padrao:hover {
   background-color: var(--marrom-escuro);
 }
+
+.logotipo{
+  height: 150px;
+  width: -100px;
+}
+
+.input-range::-webkit-slider-thumb {
+  background-color: var(--marrom-claro);
+}
+
+.rodape{
+  background-color: #816D4F;
+  height: 8rem;
+}
+
+[data-bs-theme="dark"] {
+  color: white;
+  .nav-link, .card-body, .offcanvas, .accordion, .btn {
+    --bs-nav-link-color: white;
+    --bs-card-color: white;
+    --bs-offcanvas-color: white;
+    --bs-body-color: white;
+    --bs-body-color: white;
+  }
+}
